@@ -9,6 +9,11 @@ import be.intecbrussel.the_notebook.entities.plant_entities.Tree;
 import be.intecbrussel.the_notebook.entities.plant_entities.Weed;
 import be.intecbrussel.the_notebook.service.ForestNoteBook;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+
 public class NatureApp
 {
     public static void main(String[] args)
@@ -31,9 +36,76 @@ public class NatureApp
         Omnivore myOtherOmnivore = new Omnivore("MyOtherOmnivoreName");
         Omnivore myThirdOmnivore = new Omnivore("MyThirdOmnivoreName");
 
-        System.out.println(myTree.getName() + ", " + myOtherTree.getName() + ", " + myFlower.getName() + ", " + myWeed.getName()
-                + ", " + myBush.getName()+ ", " + myHerbivore.getName()+ ", " + myOtherHerbivore.getName()+ ", " + myThirdHerbivore.getName()
-                + ", " + myCarnivore.getName()+ ", " + myOtherCarnivore.getName()+ ", " + myThirdCarnivore.getName()
-                +", " + myOmnivore.getName()+ ", " + myOtherOmnivore.getName()+ ", " + myThirdOmnivore.getName());
+        ArrayList<String> tegenGekomen = new ArrayList<>();
+        tegenGekomen.add(myTree.getName());
+        tegenGekomen.add(myOtherTree.getName());
+        tegenGekomen.add(myFlower.getName());
+        tegenGekomen.add(myWeed.getName());
+        tegenGekomen.add(myBush.getName());
+        tegenGekomen.add(myHerbivore.getName());
+        tegenGekomen.add(myOtherHerbivore.getName());
+        tegenGekomen.add(myThirdHerbivore.getName());
+        tegenGekomen.add(myCarnivore.getName());
+        tegenGekomen.add(myOtherCarnivore.getName());
+        tegenGekomen.add(myThirdCarnivore.getName());
+        tegenGekomen.add(myOmnivore.getName());
+        tegenGekomen.add(myOtherOmnivore.getName());
+        tegenGekomen.add(myThirdOmnivore.getName());
+        System.out.println(tegenGekomen);
+
+        HashSet<String> ongesorteerde = new HashSet<>();
+        ongesorteerde.add(myTree.getName());
+        ongesorteerde.add(myOtherTree.getName());
+        ongesorteerde.add(myFlower.getName());
+        ongesorteerde.add(myWeed.getName());
+        ongesorteerde.add(myBush.getName());
+        ongesorteerde.add(myHerbivore.getName());
+        ongesorteerde.add(myOtherHerbivore.getName());
+        ongesorteerde.add(myThirdHerbivore.getName());
+        ongesorteerde.add(myCarnivore.getName());
+        ongesorteerde.add(myOtherCarnivore.getName());
+        ongesorteerde.add(myThirdCarnivore.getName());
+        ongesorteerde.add(myOmnivore.getName());
+        ongesorteerde.add(myOtherOmnivore.getName());
+        ongesorteerde.add(myThirdOmnivore.getName());
+        myForestNoteBook.printNotebook(ongesorteerde);
+
+        HashSet<String> afzonderlijkHerbivore = new HashSet<>();
+        afzonderlijkHerbivore.add(myHerbivore.getName());
+        afzonderlijkHerbivore.add(myOtherHerbivore.getName());
+        afzonderlijkHerbivore.add(myThirdHerbivore.getName());
+        myForestNoteBook.printNotebook(afzonderlijkHerbivore);
+
+        HashSet<String> afzonderlijkCarnivore = new HashSet<>();
+        afzonderlijkCarnivore.add(myCarnivore.getName());
+        afzonderlijkCarnivore.add(myOtherCarnivore.getName());
+        afzonderlijkCarnivore.add(myThirdCarnivore.getName());
+        myForestNoteBook.printNotebook(afzonderlijkCarnivore);
+
+        HashSet<String> afzonderlijkOmnivore = new HashSet<>();
+        afzonderlijkOmnivore.add(myOmnivore.getName());
+        afzonderlijkOmnivore.add(myOtherOmnivore.getName());
+        afzonderlijkOmnivore.add(myThirdOmnivore.getName());
+        myForestNoteBook.printNotebook(afzonderlijkOmnivore);
+
+        ArrayList<String> allPlants = new ArrayList<>();
+        allPlants.add(myTree.getName());
+        allPlants.add(myOtherTree.getName());
+        allPlants.add(myFlower.getName());
+        allPlants.add(myWeed.getName());
+        allPlants.add(myBush.getName());
+        myForestNoteBook.sortAllPlantsByName(allPlants);
+
+        ArrayList<String> allAnimals = new ArrayList<>();
+        allAnimals.add(myHerbivore.getName());
+        allAnimals.add(myOtherHerbivore.getName());
+        allAnimals.add(myThirdHerbivore.getName());
+        allAnimals.add(myCarnivore.getName());
+        allAnimals.add(myOtherCarnivore.getName());
+        allAnimals.add(myThirdCarnivore.getName());
+        allAnimals.add(myOmnivore.getName());
+        allAnimals.add(myOtherOmnivore.getName());
+        allAnimals.add(myThirdOmnivore.getName());
+        myForestNoteBook.sortAllAnimalsByName(allAnimals);
     }
 }

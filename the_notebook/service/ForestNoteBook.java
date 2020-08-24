@@ -6,6 +6,9 @@ import be.intecbrussel.the_notebook.entities.animal_entities.Herbivore;
 import be.intecbrussel.the_notebook.entities.animal_entities.Omnivore;
 import be.intecbrussel.the_notebook.entities.plant_entities.Plant;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 
 public class ForestNoteBook
@@ -52,9 +55,20 @@ public class ForestNoteBook
     }
     //public void addPlant(Plant plant)
     //public void addAnimal(Animal animal)
-    //public void printNotebook()
-    //public void sortAllPlantsByName()
-    //public void sortAllAnimalsByName()
+    public void printNotebook(HashSet<String> tePrinten)
+    {
+        System.out.println(tePrinten);
+    }
+    public void sortAllPlantsByName(ArrayList<String> plantsByName)
+    {
+        Collections.sort(plantsByName);
+        System.out.println(plantsByName);
+    }
+    public void sortAllAnimalsByName(ArrayList<String> animalsByName)
+    {
+        Collections.sort(animalsByName);
+        System.out.println(animalsByName);
+    }
     //public void printHeavyAnimalsCount()
     //public void printTallAnimals()
 }
