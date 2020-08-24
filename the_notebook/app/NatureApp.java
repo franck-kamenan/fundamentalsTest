@@ -52,8 +52,9 @@ public class NatureApp
         tegenGekomen.add(myOtherOmnivore.getName());
         tegenGekomen.add(myThirdOmnivore.getName());
         System.out.println(tegenGekomen);
+        myForestNoteBook.printNotebook(tegenGekomen);
 
-        HashSet<String> ongesorteerde = new HashSet<>();
+        /*HashSet<String> ongesorteerde = new HashSet<>();
         ongesorteerde.add(myTree.getName());
         ongesorteerde.add(myOtherTree.getName());
         ongesorteerde.add(myFlower.getName());
@@ -67,22 +68,21 @@ public class NatureApp
         ongesorteerde.add(myThirdCarnivore.getName());
         ongesorteerde.add(myOmnivore.getName());
         ongesorteerde.add(myOtherOmnivore.getName());
-        ongesorteerde.add(myThirdOmnivore.getName());
-        myForestNoteBook.printNotebook(ongesorteerde);
+        ongesorteerde.add(myThirdOmnivore.getName());*/
 
-        HashSet<String> afzonderlijkHerbivore = new HashSet<>();
+        ArrayList<String> afzonderlijkHerbivore = new ArrayList<>();
         afzonderlijkHerbivore.add(myHerbivore.getName());
         afzonderlijkHerbivore.add(myOtherHerbivore.getName());
         afzonderlijkHerbivore.add(myThirdHerbivore.getName());
         myForestNoteBook.printNotebook(afzonderlijkHerbivore);
 
-        HashSet<String> afzonderlijkCarnivore = new HashSet<>();
+        ArrayList<String> afzonderlijkCarnivore = new ArrayList<>();
         afzonderlijkCarnivore.add(myCarnivore.getName());
         afzonderlijkCarnivore.add(myOtherCarnivore.getName());
         afzonderlijkCarnivore.add(myThirdCarnivore.getName());
         myForestNoteBook.printNotebook(afzonderlijkCarnivore);
 
-        HashSet<String> afzonderlijkOmnivore = new HashSet<>();
+        ArrayList<String> afzonderlijkOmnivore = new ArrayList<>();
         afzonderlijkOmnivore.add(myOmnivore.getName());
         afzonderlijkOmnivore.add(myOtherOmnivore.getName());
         afzonderlijkOmnivore.add(myThirdOmnivore.getName());
@@ -107,5 +107,7 @@ public class NatureApp
         allAnimals.add(myOtherOmnivore.getName());
         allAnimals.add(myThirdOmnivore.getName());
         myForestNoteBook.sortAllAnimalsByName(allAnimals);
+
+
     }
 }

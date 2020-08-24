@@ -55,9 +55,13 @@ public class ForestNoteBook
     }
     //public void addPlant(Plant plant)
     //public void addAnimal(Animal animal)
-    public void printNotebook(HashSet<String> tePrinten)
+    /*public void printNotebook(HashSet<String> ongesorteerdeTePrinten)
     {
-        System.out.println(tePrinten);
+        System.out.println(ongesorteerdeTePrinten);
+    }*/
+    public void printNotebook(ArrayList<String> ongesorteerdeTePrinten)
+    {
+        System.out.println(ongesorteerdeTePrinten);
     }
     public void sortAllPlantsByName(ArrayList<String> plantsByName)
     {
