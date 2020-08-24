@@ -59,9 +59,9 @@ public class ForestNoteBook
     {
         System.out.println(ongesorteerdeTePrinten);
     }*/
-    public void printNotebook(ArrayList<String> ongesorteerdeTePrinten)
+    public void printNotebook(ArrayList<String> TePrinten)
     {
-        System.out.println(ongesorteerdeTePrinten);
+        System.out.println(TePrinten);
     }
     public void sortAllPlantsByName(ArrayList<String> plantsByName)
     {

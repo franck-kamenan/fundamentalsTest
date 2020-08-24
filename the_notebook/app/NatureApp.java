@@ -108,6 +108,7 @@ public class NatureApp
         allAnimals.add(myThirdOmnivore.getName());
         myForestNoteBook.sortAllAnimalsByName(allAnimals);
 
-
+        myForestNoteBook.printNotebook(allPlants);
+        myForestNoteBook.printNotebook(allAnimals);
     }
 }
